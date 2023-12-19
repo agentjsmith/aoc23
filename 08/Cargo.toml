@@ -1,0 +1,19 @@
+[package]
+name = "aoc23day8"
+version = "0.1.0"
+authors = ["Jim Smith <agentjsmith@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rayon = "1.8.0"
+rstest = "0.18.2"
+num = "0.4.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+#rustflags = ["-C", "target-cpu=native"]
+debug=false
